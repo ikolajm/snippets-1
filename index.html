@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+
+  <!--GOOGLE FONTS-->
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+  <!--FONTAWESOME-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+  integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
+  <!--MY CSS-->
+  <link rel="stylesheet" href="styles.css" type="text/css">
+
+  <title>Snippets</title>
+  </head>
+
+  <body>
+    <main>
+
+      <!--Nav work-->
+      <div>
+        <header>
+
+          <!--Button Container-->
+          <div class="open-container" >
+
+            <button onclick="openNavSlide()">Slide Out</button>
+
+            <button onclick="openNavPush()">Push Out</button>
+
+            <button onclick="openNavPushOpat()">Push Out, Darken</button>
+
+          </div>
+
+        </header>
+
+        <!--Offscreen nav-->
+        <!--Slide-->
+        <nav class="slide">
+          <div class="close-container">
+            <button onclick="closeNavSlide()">Slide In</button>
+          </div>
+          <ul>
+            <li>Option</li>
+            <li>Option</li>
+            <li>Option</li>
+            <li>Option</li>
+            <li>Option</li>
+          </ul>
+        </nav>
+
+        <!--Push-->
+        <nav class="push">
+          <div class="close-container">
+            <button onclick="closeNavPush()">Push In</button>
+          </div>
+          <ul>
+            <li>Option</li>
+            <li>Option</li>
+            <li>Option</li>
+            <li>Option</li>
+            <li>Option</li>
+          </ul>
+        </nav>
+
+        <!--Push w/ opat-->
+        <nav class="pushopat">
+          <div class="close-container">
+            <button onclick="closeNavPushOpat()">Push In, Lighten</button>
+          </div>
+          <ul>
+            <li>Option</li>
+            <li>Option</li>
+            <li>Option</li>
+            <li>Option</li>
+            <li>Option</li>
+          </ul>
+        </nav>
+        <!--End offscreen-->
+      </div>
+      <!--End nav work-->
+
+      <!--Icon work-->
+      <button onclick="openIcons()">Show Icons</button>
+
+      <div id="icon-work-container">
+
+        <button onclick="closeIcons()">Hide Icons</button>
+
+        <div class="icons">
+
+          <div class="menu2x" onclick="menu2x()">
+            <div class="bar1"></div>
+            <div class="bar2 visible"></div>
+            <div class="bar3"></div>
+          </div>
+          <p>Standard transition</p>
+
+          <div class="menu2x" onclick="menu2xslideout()">
+            <div class="bar1 1slide"></div>
+            <div class="bar2 2slide visible"></div>
+            <div class="bar3 3slide"></div>
+          </div>
+          <p>Slideout transition</p>
+
+          <div class="menu2x rotate" onclick="menu2xrotate()">
+            <div class="bar1 1rotate"></div>
+            <div class="bar2 2rotate visible"></div>
+            <div class="bar3 3rotate"></div>
+          </div>
+          <p>Rotate transition</p>
+
+          <div class="menu2x collapse" onclick="menu2xcollapse()">
+            <div class="bar1 collapse1"></div>
+            <div class="bar2 collapse2 visible"></div>
+            <div class="bar3 collapse3"></div>
+          </div>
+          <p>Collapse transition (Cant figure out second stage translate)</p>
+
+        </div>
+
+      </div>
+
+      <!--Hover Animations-->
+      <div class="side-tabs">
+        <div class="st-red"><p>Hello</p></div>
+        <div class="st-blue"><p>Hello</p></div>
+        <div class="st-yellow"><p>Hello</p></div>
+        <div class="st-green"><p>Hello</p></div>
+      </div>
+
+      <div class="middle-animations">
+
+        <div class="ma-contain ma-contain-grow" onmouseover="grow()" onmouseout="endgrow()">
+          <i class="fas fa-blind icon-grow"></i>
+          <div class="text-container">
+            <p class="main-text main-grow">Main Text</p>
+            <p class="supporting-text support-grow">Supporting Text</p>
+          </div>
+        </div>
+
+        <div class="ma-contain ma-contain-slide" onmouseover="slide()" onmouseout="endslide()">
+          <i class="fas fa-blind icon-slide"></i>
+          <div class="text-container">
+            <p class="main-text main-slide">Main Text</p>
+            <p class="supporting-text support-slide">Supporting Text</p>
+          </div>
+        </div>
+
+        <div class="ma-contain ma-contain-transition" onmouseover="transition()" onmouseout="endtransition()">
+          <i class="fas fa-blind transition-icon"></i>
+          <div class="text-container text-contain-transition">
+            <p class="main-text transition-main">Main Text</p>
+            <p class="supporting-text transition-support">Supporting Text</p>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+  <!--JQ-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--MY JS-->
+  <script src="main.js"></script>
+  </body>
+</html>
